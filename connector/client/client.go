@@ -169,8 +169,7 @@ func (client *ConnectorClient) getToken() (string, error) {
 	resp, err := authClient.Do(r)
 	if err != nil {
 		return "", customerror.HTTPError{
-			StatusCode: resp.StatusCode,
-			HtErr:      err,
+			HtErr: err,
 		}
 	}
 
